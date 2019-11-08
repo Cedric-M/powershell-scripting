@@ -1,0 +1,1 @@
+Remove-Item $env:temp* -Recurse -Force
