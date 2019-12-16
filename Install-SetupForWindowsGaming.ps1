@@ -14,7 +14,7 @@ Remove-Item $Path\$Installer
 
 Write-Host "Downloading Battle.net® Desktop App" -ForegroundColor DarkGreen
 $Installer = "bnet_installer.exe";
-Invoke-WebRequest "https://www.blizzard.com/en-gb/download/confirmation?platform=windows&locale=enGB&version=LIVE&id=bnetdesk" -OutFile $Path\$Installer;
+Invoke-WebRequest "https://www.battle.net/download/getInstallerForGame?os=win&locale=enGB&version=LIVE&gameProgram=BATTLENET_APP" -OutFile $Path\$Installer;
 Start-Process -FilePath $Path\$Installer -Args "/silent /install" -Verb RunAs -Wait;
 Remove-Item $Path\$Installer
 
